@@ -2,8 +2,8 @@
 
 选择器                                                                                                                           | 例子                    | 例子描述                               | CSS
 ----------------------------------------------------------------------------------------------------------------------------- | --------------------- | ---------------------------------- | ---
-[._class_](http://www.w3school.com.cn/cssref/selector_class.asp "CSS .class 选择器")                                             | .intro                | 选择 class="intro" 的所有元素。            | 1  
-[#_id_](http://www.w3school.com.cn/cssref/selector_id.asp "CSS #id 选择器")                                                     | #firstname           | 选择 id="firstname" 的所有元素。           | 1  
+[._class_](http://www.w3school.com.cn/cssref/selector_class.asp "CSS .class 选择器")                                             | .intro                | 选择 `class="intro"` 的所有元素。            | 1  
+[#_id_](http://www.w3school.com.cn/cssref/selector_id.asp "CSS #id 选择器")                                                     | #firstname           | 选择 `id="firstname"` 的所有元素。           | 1  
 [*](http://www.w3school.com.cn/cssref/selector_all.asp "CSS * 选择器")                                                          | *                    | 选择所有元素。                            | 2  
 [_element_](http://www.w3school.com.cn/cssref/selector_element.asp "CSS element 选择器")                                         | p                     | 选择所有 ``<p>`` 元素。                       | 1  
 [_element_,_element_](http://www.w3school.com.cn/cssref/selector_element_comma.asp "CSS element,element 选择器")                 | div,p                 | 选择所有 `<div>` 元素和所有 `<p>` 元素。           | 1  
@@ -24,7 +24,7 @@
 [:first-child](http://www.w3school.com.cn/cssref/selector_first-child.asp "CSS :first-child 选择器")                             | p:first-child         | 选择属于父元素的第一个子元素的每个 `<p>` 元素。          | 2  
 [:before](http://www.w3school.com.cn/cssref/selector_before.asp "CSS :before 选择器")                                            | p:before              | 在每个 `<p>` 元素的内容之前插入内容。               | 2  
 [:after](http://www.w3school.com.cn/cssref/selector_after.asp "CSS :after 选择器")                                               | p:after               | 在每个 `<p>` 元素的内容之后插入内容。               | 2  
-[:lang(_language_)](http://www.w3school.com.cn/cssref/selector_lang.asp "CSS :lang(language) 选择器")                            | p:lang(it)            | 选择带有以 "it" 开头的 lang 属性值的每个 `<p>` 元素。 | 2  
+[:lang(_language_)](http://www.w3school.com.cn/cssref/selector_lang.asp "CSS :lang(language) 选择器")                            | p:lang(it)            | 选择带有以 `"it"` 开头的 `lang` 属性值的每个 `<p>` 元素。 | 2  
 [_element1_~_element2_](http://www.w3school.com.cn/cssref/selector_gen_sibling.asp "CSS element1~element2 选择器")               | p~ul                  | 选择前面有 `<p>` 元素的每个 `<ul>` 元素。           | 3  
 [[_attribute_^=_value_]](http://www.w3school.com.cn/cssref/selector_attr_begin.asp "CSS [attribute^=value] 选择器")              | a[src^="https"]       | 选择其 src 属性值以 "https" 开头的每个 `<a>` 元素。 | 3  
 [[_attribute_$=_value_]](http://www.w3school.com.cn/cssref/selector_attr_end.asp "CSS [attribute$=value] 选择器")                | a[src$=".pdf"]        | 选择其 src 属性以 ".pdf" 结尾的所有 `<a>` 元素。   | 3  
