@@ -1,8 +1,8 @@
-# jQuery知识总结之DOM操作
+## jQuery知识总结之DOM操作
 
 > 本篇文章主要总结一下jQuery中DOM节点的创建、插入、删除与替换以及jQuery中丰富的遍历节点的方法。
 
-## 一、jQueryDOM操作之节点创建与属性的处理
+### 一、jQueryDOM操作之节点创建与属性的处理
 
 JavaScript原生接口创建节点，在处理上是非常复杂与繁琐的，jQuery简化了这个过程。
 
@@ -40,7 +40,7 @@ $("<div class='right'><div class='aaron'>动态创建DIV元素节点</div></div>
 
 这就是jQuery创建节点的方式，让我们保留HTML的结构书写方式，非常的简单、方便和灵活
 
-## 二、jQueryDOM操作之DOM内部插入节点
+### 二、jQueryDOM操作之DOM内部插入节点
 
 >$().append()与$().appendTo($())
 
@@ -59,7 +59,7 @@ appendTo：实际上，使用这个方法是颠倒了常规的$(A).append(B)的�
 2.  append()前面是被插入的对象，后面是要在对象内插入的元素内容
 3.   appendTo()前面是要插入的元素内容，而后面是被插入的对象
 
-## 三、jQueryDOM操作之DOM内部插入节点
+### 三、jQueryDOM操作之DOM内部插入节点
 
 > $().prepend()与$().prependTo($())
 
@@ -83,7 +83,7 @@ prepend与prependTo的使用及区别：
 * appendTo()把所有匹配的元素追加到另一个指定元素的集合中
 * prependTo()把所有匹配的元素前置到另一个指定的元素集合中
 
-## 四、jQueryDOM操作之DOM外部插入节点
+### 四、jQueryDOM操作之DOM外部插入节点
 
 > $().before()与$().after()
 
@@ -102,7 +102,7 @@ prepend与prependTo的使用及区别：
 * after向元素的后边添加html代码，如果元素后面有元素了，那将后面的元素后移，然后将html代码插入
 * before向元素的前边添加html代码，如果元素前面有元素了，那将前面的元素前移，然后将html代码插
 
-## 五、jQueryDOM操作之外部插入节点
+### 五、jQueryDOM操作之外部插入节点
 
 > insertAfter($())与insertBefore($())
 
@@ -119,7 +119,7 @@ prepend与prependTo的使用及区别：
 * insertAfter将JQuery封装好的元素插入到指定元素的后面，如果元素后面有元素了，那将后面的元素后移，然后将JQuery对象插入；
 * insertBefore将JQuery封装好的元素插入到指定元素的前面，如果元素前面有元素了，那将前面的元素前移，然后将JQuery对象插入；
 
-## 六、jQueryDOM节点操作之删除
+### 六、jQueryDOM节点操作之删除
 
 > empty()
 
@@ -143,7 +143,7 @@ $('.hello').empty()
 <div class="hello"></div>
 ```
 
-## 七、jQueryDOM节点操作之删除
+### 七、jQueryDOM节点操作之删除
 
 > remove()的有参用法和无参用法
 
@@ -177,7 +177,7 @@ remove比empty好用的地方就是可以传递一个选择器表达式用来过
 $("p").remove(":contains('3')")
 ```
 
-## 八、DOM节点删除之empty和remove区别
+### 八、DOM节点删除之empty和remove区别
 
 
 要用到移除指定元素的时候，jQuery提供了empty()与remove([expr])二个方法，两个都是删除元素，但是两者还是有区别
@@ -192,7 +192,7 @@ $("p").remove(":contains('3')")
 * 该节点与该节点所包含的所有后代节点将同时被删除
 * 提供传递一个筛选的表达式，删除指定合集中的元素
 
-## 九、jQueryDOM节点操作之删除
+### 九、jQueryDOM节点操作之删除
 
 > detach()
 
@@ -235,7 +235,7 @@ $("div").detach()这一句会移除对象，仅仅是显示效果没有了。但
 </body>
 ```
 
-## 十、jQueryDOM节点删除
+### 十、jQueryDOM节点删除
 
 > detach()和remove()区别
 
@@ -262,7 +262,7 @@ detach | 参数同remove | 否           | 情况同remove
 * 与remove()不同的是，所有绑定的事件、附加的数据等都会保留下来
 * 例如：$("p").detach()这一句会移除对象，仅仅是显示效果没有了。但是内存中还是存在的。当你append之后，又重新回到了文档流中。就又显示出来了。
 
-## 十一、jQueryDOM节点操作之节点复制
+### 十一、jQueryDOM节点操作之节点复制
 
 > .clone()
 
@@ -301,7 +301,7 @@ $("div").clone(true) //结构、事件与数据都克隆
 * clone()方法是jQuery扩展的，只能处理通过jQuery绑定的事件与数据
 * <u>**元素数据（data）内对象和数组不会被复制，将继续被克隆元素和原始元素共享。深复制的所有数据，需要手动复制每一个**</u>
 
-## 十二、jQueryDOM节点操作之节点替换
+### 十二、jQueryDOM节点操作之节点替换
 
 > replaceWith()和replaceAll()
 
@@ -350,7 +350,7 @@ $('<a style="color:red">替换第二段的内容</a>').replaceAll('p:eq(1)')
 * .replaceWith()方法，和大部分其他jQuery方法一样，返回jQuery对象，所以可以和其他方法链接使用
 * .replaceWith()方法返回的jQuery对象引用的是替换前的节点，而不是通过replaceWith/replaceAll方法替换后的节点
 
-## 十三、jQueryDOM节点操作之包裹节点
+### 十三、jQueryDOM节点操作之包裹节点
 
 > wrap()
 
@@ -396,7 +396,7 @@ $('p').wrap(function() {
 
 我们可以通过wrap方法给选中元素增加一个包裹的父元素。相反，如果删除选中元素的父元素要如何处理 ?  
 
-## 十四、jQueryDOM节点操作之包裹多个节点
+### 十四、jQueryDOM节点操作之包裹多个节点
 
 > wrapAll()
 
@@ -459,7 +459,7 @@ $('p').wrapAll(function() {
 </div>
 ```
 
-## 十五、jQueryDOM节点操作之包裹节点内部所有子节点
+### 十五、jQueryDOM节点操作之包裹节点内部所有子节点
 
 > wrapInner()
 
@@ -516,7 +516,7 @@ $('div').wrapInner(function() {
 
 当通过一个选择器字符串传递给.wrapInner() 函数，其参数应该是格式正确的 HTML，并且 HTML 标签应该是被正确关闭的。
 
-## 十六、jQueryDOM节点操作之删除节点父节点
+### 十六、jQueryDOM节点操作之删除节点父节点
 
 > unwrap()
 
@@ -550,7 +550,7 @@ $('p').unwrap();
 <p>p元素</p>
 ```
 
-## 十七、jQueryDOM节点操作之遍历
+### 十七、jQueryDOM节点操作之遍历
 
 > children()
 
@@ -583,7 +583,7 @@ $("div").children(".selected")
 
 同样的也是因为jQuery是合集对象，可能需要对这个合集对象进行一定的筛选，找出目标元素，所以允许传一个选择器的表达式
 
-## 十八、jQueryDOM节点操作之遍历
+### 十八、jQueryDOM节点操作之遍历
 
 > find()
 
@@ -609,7 +609,7 @@ jQuery是一个合集对象，如果想快速查找DOM树中的这些元素的�
 * find只在后代中遍历，不包括自己。
 * 选择器 context 是由 .find() 方法实现的；因此，$('.item-ii').find('li') 等价于 $('li', '.item-ii')(找到类名为item-ii的标签下的li标签)。
 
-## 十九、jQueryDOM节点操作之遍历
+### 十九、jQueryDOM节点操作之遍历
 
 > parent()
 
@@ -640,7 +640,7 @@ parent()方法允许我们能够在DOM树中搜索到这些元素的父级元素
 
 同样的也是因为jQuery是合集对象，可能需要对这个合集对象进行一定的筛选，找出目标元素，所以允许传一个选择器的表达式  ****
 
-## 二十、jQueryDOM节点操作之遍历
+### 二十、jQueryDOM节点操作之遍历
 
 > parents()
 
@@ -678,7 +678,7 @@ parents()方法允许我们能够在DOM树中搜索到这些元素的祖先元�
 1.  .parents()和.parent()方法是相似的，但后者只是进行了一个单级的DOM树查找 
 2.  $( "html" ).parent()方法返回一个包含document的集合，而$( "html" ).parents()返回一个空集合。
 
-## 二十一、jQueryDOM节点操作之遍历
+### 二十一、jQueryDOM节点操作之遍历
 
 > closest()
 
@@ -713,7 +713,7 @@ $("div").closet("li')
 1.  .parent()带参是从元素最近的父元素中查找跟选择器匹配的父元素，若没有不会再向上查找，length就是0；
 2.  .closest必须带选择器参数，会一直向上遍历到包括document，直到找到跟选择器匹配的父元素，没有则是0；
 
-## 二十二、jQueryDOM节点操作之遍历
+### 二十二、jQueryDOM节点操作之遍历
 
 > next()
 
@@ -741,7 +741,7 @@ jQuery是一个合集对象，如果想快速查找指定元素集合中每一�
 
 同样的也是因为jQuery是合集对象，可能需要对这个合集对象进行一定的筛选，找出目标元素，所以允许传一个选择器的表达式  ****
 
-## 二十三、jQueryDOM节点操作之遍历
+### 二十三、jQueryDOM节点操作之遍历
 
 > prev()
 
@@ -769,7 +769,7 @@ jQuery是一个合集对象，如果想快速查找指定元素集合中每一�
 
 同样的也是因为jQuery是合集对象，可能需要对这个合集对象进行一定的筛选，找出目标元素，所以允许传一个选择器的表达式  ****
 
-## 二十四、jQueryDOM节点操作之遍历
+### 二十四、jQueryDOM节点操作之遍历
 
 > siblings()
 
@@ -797,7 +797,7 @@ jQuery是一个合集对象，如果想快速查找指定元素集合中每一�
 
 同样的也是因为jQuery是合集对象，可能需要对这个合集对象进行一定的筛选，找出目标元素，所以允许传一个选择器的表达式  ****
 
-## 二十五、jQueryDOM节点操作之遍历
+### 二十五、jQueryDOM节点操作之遍历
 
 > add()
 
@@ -837,7 +837,7 @@ $('li').add(document.getElementsByTagName('p')[0])
 $('li').add('<p>新的p元素</p>').appendTo(目标位置)
 ```
 
-## 二十六、jQueryDOM节点操作之遍历
+### 二十六、jQueryDOM节点操作之遍历
 
 > each()
 

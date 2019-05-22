@@ -1,5 +1,5 @@
 ## [CSS选择器](./CSS选择器.md)
-## [CSS选择器](./jQuery知识总结之DOM操作.md)
+## [jQuery知识总结之DOM操作](./jQuery知识总结之DOM操作.md)
 
 
 
